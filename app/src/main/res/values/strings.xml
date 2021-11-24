@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SportLottery</string>
+    <string-array name="player_money">
+        <item>100元</item>
+        <item>500元</item>
+        <item>1000元</item>
+    </string-array>
+</resources>
