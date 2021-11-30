@@ -5,4 +5,11 @@
         <item>500元</item>
         <item>1000元</item>
     </string-array>
+    <string-array name="player_car">
+        <item>賽車1號</item>
+        <item>賽車2號</item>
+        <item>賽車3號</item>
+        <item>賽車4號</item>
+        <item>賽車5號</item>
+    </string-array>
 </resources>
