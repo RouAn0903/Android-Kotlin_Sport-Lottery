@@ -64,6 +64,26 @@ class SecActivity : AppCompatActivity() {
         }
 
         btn_again.setOnClickListener {
+            val debt_car = arrayOf("1號車","2號車","3號車", "4號車", "5號車" )
+            var choice_car =0
+            val debt_money = arrayOf("100元","500元","1000元")
+            var choice_money =0
+            AlertDialog.Builder(this)
+                .setTitle("選擇下注賽車")
+                .setSingleChoiceItems(debt_car, 0){ dialogInterface, i ->
+                    choice_car = i
+                }
+                .setPositiveButton("下一步"){  dialog, which ->
+
+                    AlertDialog.Builder(this)
+                        .setTitle("選擇下注獎金")
+                        .setSingleChoiceItems(debt_money, 0){ dialogInterface, i ->
+                            choice_money = i
+                        }
+                        .setPositiveButton("確定"){  dialog, which ->
+
+                        }.show()
+                }.show()
 
         }
 
@@ -75,7 +95,6 @@ class SecActivity : AppCompatActivity() {
                    startActivity(Intent(this, MainActivity::class.java))
                 }
                 .setPositiveButton("返回"){ dialog, which ->
-                   showToast("返回")
                 }.show()
         }
 
