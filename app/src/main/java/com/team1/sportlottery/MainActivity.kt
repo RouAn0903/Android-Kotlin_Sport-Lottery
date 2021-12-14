@@ -1,14 +1,14 @@
 package com.team1.sportlottery
 
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.Toast
+import android.widget.*
+
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val name = findViewById<EditText>(R.id.name)
         val age = findViewById<EditText>(R.id.age)
         val money = findViewById<Spinner>(R.id.money)
+        val car = findViewById<Spinner>(R.id.car)
         val enter = findViewById<Button>(R.id.enter)
 
         enter.setOnClickListener{
@@ -39,7 +40,15 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             else{
+                val b_inform = Bundle()
+                b_inform.putString("inform", name.text.toString()+"\t\t"+age.text.toString()+"\t\t\t\t\t"+car.selectedItem.toString()+"\t\t\t\t\t"+money.selectedItem.toString())
+                val intent = Intent(this, SecActivity::class.java)
+                intent.putExtras(b_inform)
+                startActivity(intent)
+                /*
                 startActivity(Intent(this, SecActivity::class.java))
+                */
+
             }
         }
     }

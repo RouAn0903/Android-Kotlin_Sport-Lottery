@@ -8,6 +8,7 @@ import android.os.Looper
 import android.os.Message
 import android.widget.Button
 import android.widget.SeekBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import java.util.zip.Adler32
@@ -41,6 +42,11 @@ class SecActivity : AppCompatActivity() {
         car3 = findViewById(R.id.car3)
         car4 = findViewById(R.id.car4)
         car5 = findViewById(R.id.car5)
+        val inform = findViewById<TextView>(R.id.inform)
+
+        intent?.extras?.let {
+            inform.text = it.getString("inform")
+        }
 
         btn_start.setOnClickListener{
             btn_start.isEnabled = false
@@ -61,7 +67,9 @@ class SecActivity : AppCompatActivity() {
             runCar3()
             runCar4()
             runCar5()
+
         }
+
 
         btn_again.setOnClickListener {
             val debt_car = arrayOf("1號車","2號車","3號車", "4號車", "5號車" )
@@ -119,27 +127,26 @@ class SecActivity : AppCompatActivity() {
             car5.progress = progressCar5
         //若兔子抵達，則顯示兔子勝利
         if (progressCar1 >= 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100 && progressCar5 < 100) {
-            showToast("Car1勝利") //顯示Car1勝利
+            showToast("賽車1勝利") //顯示賽車1勝利
             btn_start.isEnabled = true //按鈕可操作
         }
         else if (progressCar2 >= 100 && progressCar1 < 100 && progressCar3 < 100 && progressCar4 < 100 && progressCar5 < 100) {
-            showToast("Car2勝利") //顯示Car2勝利
+            showToast("賽車2勝利") //顯示賽車2勝利
             btn_start.isEnabled = true //按鈕可操作
         }
         else if (progressCar3 >= 100 && progressCar1 < 100 && progressCar2 < 100 && progressCar4 < 100 && progressCar5 < 100){
-            showToast("Car3勝利") //顯示Car3勝利
+            showToast("賽車3勝利") //顯示賽車3勝利
             btn_start.isEnabled = true //按鈕可操作
         }
         else if (progressCar4 >= 100 && progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar5 < 100){
-            showToast("Car4勝利") //顯示Car3勝利
+            showToast("賽車4勝利") //顯示賽車3勝利
             btn_start.isEnabled = true //按鈕可操作
         }
         else if (progressCar5 >= 100 && progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100){
-            showToast("Car5勝利") //顯示Car3勝利
+            showToast("賽車5勝利") //顯示賽車3勝利
             btn_start.isEnabled = true //按鈕可操作
         }
         true
-
 
     }
 
