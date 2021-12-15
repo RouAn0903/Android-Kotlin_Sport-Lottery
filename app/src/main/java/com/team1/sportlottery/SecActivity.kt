@@ -11,7 +11,6 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import java.util.zip.Adler32
 
 class SecActivity : AppCompatActivity() {
 
@@ -43,9 +42,14 @@ class SecActivity : AppCompatActivity() {
         car4 = findViewById(R.id.car4)
         car5 = findViewById(R.id.car5)
         val inform = findViewById<TextView>(R.id.inform)
+        val inform_car = findViewById<TextView>(R.id.inform_car)
+        val inform_money = findViewById<TextView>(R.id.inform_money)
+        val inform_total = findViewById<TextView>(R.id.inform_total)
 
         intent?.extras?.let {
             inform.text = it.getString("inform")
+            inform_car.text = it.getString("inform_car")
+            inform_money.text = it.getString("inform_money")
         }
 
         btn_start.setOnClickListener{
@@ -68,30 +72,37 @@ class SecActivity : AppCompatActivity() {
             runCar4()
             runCar5()
 
+
         }
 
 
         btn_again.setOnClickListener {
-            val debt_car = arrayOf("1號車","2號車","3號車", "4號車", "5號車" )
+            val debt_car = arrayOf("賽車1號","賽車2號","賽車3號", "賽車4號", "賽車5號" )
             var choice_car =0
             val debt_money = arrayOf("100元","500元","1000元")
             var choice_money =0
+
             AlertDialog.Builder(this)
                 .setTitle("選擇下注賽車")
                 .setSingleChoiceItems(debt_car, 0){ dialogInterface, i ->
                     choice_car = i
-                }
-                .setPositiveButton("下一步"){  dialog, which ->
+                    inform_car.text = "${debt_car[i]}"
 
+                }
+                .setPositiveButton("下一步"){ dialog, which ->
                     AlertDialog.Builder(this)
                         .setTitle("選擇下注獎金")
                         .setSingleChoiceItems(debt_money, 0){ dialogInterface, i ->
                             choice_money = i
+                            inform_money.text = "\t\t\t\t\t\t\t"+"${debt_money[i]}"
+
                         }
                         .setPositiveButton("確定"){  dialog, which ->
 
                         }.show()
                 }.show()
+
+
 
         }
 
