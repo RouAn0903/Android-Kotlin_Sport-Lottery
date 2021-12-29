@@ -42,7 +42,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="25dp"
-        android:text="下注哪輛賽車會跑的最快。正確者會贏得雙倍下注獎金，錯誤者會賠掉下注獎金 "
+        android:text="下注哪輛賽車會跑的最快。正確者會贏得10倍下注獎金，錯誤者會賠掉下注獎金 "
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 val b_inform = Bundle()
                 b_inform.putString("inform", name.text.toString()+"\t\t"+age.text.toString())
                 b_inform.putString("inform_car", car.selectedItem.toString())
-                b_inform.putString("inform_money","\t\t\t\t\t\t\t"+money.selectedItem.toString())
+                b_inform.putString("inform_money",money.selectedItem.toString())
                 val intent = Intent(this, SecActivity::class.java)
                 intent.putExtras(b_inform)
                 startActivity(intent)
@@ -55,4 +55,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
 
