@@ -214,9 +214,9 @@ class SecActivity : AppCompatActivity() {
             showToast("賽車4勝利") //顯示賽車3勝利
             if (inform_car.text == "賽車4號"){
                 inform_total.text =  when(inform_money.text) {
-                    "100元" -> "300元"
-                    "500元" -> "1000元"
-                    else -> "3000元"
+                    "100元" -> "1000元"
+                    "500元" -> "5000元"
+                    else -> "10000元"
                 }
                 endMsg.setTextColor(Color.RED)
                 endMsg.text = "賽車4勝利\n恭喜獲得10倍獎金:${inform_total.text}"
