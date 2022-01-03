@@ -120,6 +120,8 @@ class SecActivity : AppCompatActivity() {
             btn_again.isEnabled = false
             btn_start.isEnabled = true
 
+            endMsg.text = ""
+
         }
 
         btn_finish.setOnClickListener {
