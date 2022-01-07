@@ -7,10 +7,22 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="25dp"
+        android:text="規則"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="賽車運彩"
+        android:text="賽車比賽"
         android:textColor="#3F51B5"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,85 +30,25 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.088" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Spinner
+        android:id="@+id/car"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="191dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="188dp"
-        android:text="規則"
-        android:textColor="@color/black"
-        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="145dp"
+        android:entries="@array/player_car"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="362dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="25dp"
-        android:text="下注哪輛賽車會跑的最快。正確者會贏得10倍下注獎金，錯誤者會賠掉下注獎金 "
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="22dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="43dp"
-        android:text="年齡 :"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/age"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-    <EditText
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="94dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColorHint="@android:color/holo_red_light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="43dp"
-        android:text="姓名 :"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/name"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/age" />
 
     <EditText
         android:id="@+id/age"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="94dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="56dp"
         android:ems="10"
         android:inputType="numberDecimal"
         android:textColorHint="@android:color/holo_red_light"
@@ -105,30 +57,19 @@
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="15dp"
-        android:text="下注賽車 :"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="43dp"
+        android:text="姓名 :"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/car"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/name"
+        app:layout_constraintHorizontal_bias="0.894"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <Spinner
-        android:id="@+id/car"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="185dp"
-        android:entries="@array/player_car"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
         android:id="@+id/textView6"
@@ -141,16 +82,73 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/money"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.882"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColorHint="@android:color/holo_red_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="43dp"
+        android:text="年齡 :"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/age"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="358dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        android:text="下注哪輛賽車會跑的最快。正確者會贏得10倍下注獎金，錯誤者會賠掉下注獎金 "
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="15dp"
+        android:text="下注賽車 :"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/car"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <Spinner
         android:id="@+id/money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
-        android:layout_marginEnd="188dp"
+        android:layout_marginEnd="148dp"
         android:entries="@array/player_money"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -161,10 +159,11 @@
         android:layout_width="144dp"
         android:layout_height="46dp"
         android:layout_marginStart="133dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="134dp"
-        android:text="進入運彩"
+        android:text="進入彩券"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/money"
         tools:ignore="TouchTargetSizeCheck" />

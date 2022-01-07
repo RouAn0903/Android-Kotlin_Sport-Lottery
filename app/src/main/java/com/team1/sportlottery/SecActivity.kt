@@ -143,7 +143,7 @@ class SecActivity : AppCompatActivity() {
 
     //建立 Handler 物件接收訊息
     private val handler = Handler(Looper.getMainLooper()) { msg ->
-        //判斷編號，並更新兔子的進度
+        //判斷編號，並更新賽車的進度
         if (msg.what == 1)
             car1.progress = progressCar1
         else if (msg.what == 2)
@@ -213,7 +213,7 @@ class SecActivity : AppCompatActivity() {
 
         }
         else if (progressCar4 >= 100 && progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar5 < 100){
-            showToast("賽車4勝利") //顯示賽車3勝利
+            showToast("賽車4勝利") //顯示賽車4勝利
             if (inform_car.text == "賽車4號"){
                 inform_total.text =  when(inform_money.text) {
                     "100元" -> "1000元"
@@ -232,7 +232,7 @@ class SecActivity : AppCompatActivity() {
 
         }
         else if (progressCar5 >= 100 && progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100){
-            showToast("賽車5勝利") //顯示賽車3勝利
+            showToast("賽車5勝利") //顯示賽車5勝利
             if (inform_car.text == "賽車5號"){
                 inform_total.text =  when(inform_money.text) {
                     "100元" -> "1000元"
@@ -257,7 +257,7 @@ class SecActivity : AppCompatActivity() {
 
     private fun runCar1(){
         Thread {
-            //兔子有三分之二的機率會偷懶
+
             val sleepProbability = arrayOf(true, true, false)
             while (progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100 && progressCar5 < 100) {
                 try {
@@ -279,7 +279,7 @@ class SecActivity : AppCompatActivity() {
 
     private fun runCar2(){
         Thread {
-            //兔子有三分之二的機率會偷懶
+
             val sleepProbability = arrayOf(true, true, false)
             while (progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100 && progressCar5 < 100) {
                 try {
@@ -300,7 +300,7 @@ class SecActivity : AppCompatActivity() {
 
     private fun runCar3(){
         Thread {
-            //兔子有三分之二的機率會偷懶
+
             val sleepProbability = arrayOf(true, true, false)
             while (progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100 && progressCar5 < 100) {
                 try {
@@ -320,7 +320,7 @@ class SecActivity : AppCompatActivity() {
 
     private fun runCar4(){
         Thread {
-            //兔子有三分之二的機率會偷懶
+
             val sleepProbability = arrayOf(true, true, false)
             while (progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100 && progressCar5 < 100) {
                 try {
@@ -341,7 +341,7 @@ class SecActivity : AppCompatActivity() {
 
     private fun runCar5(){
         Thread {
-            //兔子有三分之二的機率會偷懶
+
             val sleepProbability = arrayOf(true, true, false)
             while (progressCar1 < 100 && progressCar2 < 100 && progressCar3 < 100 && progressCar4 < 100 && progressCar5 < 100) {
                 try {
